@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body {
+  font-family: "Oswald", sans-serif;
+  background-image: url("../img/istockphoto-471627217-170667a.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sorteo {
+  background-color: #1e2b3800;
+  width: 18vw;
+  height: auto;
+  padding: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0px 0px 29px 9px rgb(0 0 0 / 54%);
+}
+.sorteo .sorteo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sorteo .sorteo-container h2 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+}
+.sorteo .sorteo-container ul {
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sorteo .sorteo-container ul li {
+  color: #fff;
+  background-color: #1e2b388a;
+  list-style: none;
+  margin: 5px 0;
+  padding: 5px 20px;
+  width: 150px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sorteo .sorteo-container .nombres #sorteo {
+  color: #fff;
+  background-color: #1e2b388a;
+  font-family: "Oswald", sans-serif;
+  list-style: none;
+  margin: 5px 0;
+  padding: 5px 20px;
+  width: 150px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sorteo .sorteo-container .botones input {
+  background-color: #fff;
+  color: #1e2b38;
+  margin: 9px;
+  padding: 10px 20px;
+  width: 150px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*El ganador es...*/
+.swal2-container.swal2-center>.swal2-popup {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    width: 266px;
+    border-radius: 15px;
+}
+.swal2-title {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.8em 1em 0;
+  color: #1e2b38;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+  word-wrap: break-word;
+}
+.swal2-styled.swal2-confirm {
+  border: 0;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: #1e2b38;
+  color: #fff;
+  font-size: 1em;
+}
+
+/*No has agregado participantes*/
+.swal2-title {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.8em 1em 0;
+    color: #1e2b38;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+    word-wrap: break-word;
+}
+.swal2-html-container {
+    z-index: 1;
+    justify-content: center;
+    margin: 1em 1.6em 0.3em;
+    padding: 0;
+    overflow: auto;
+    color: inherit;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+@media (min-width: 320px) {
+  .sorteo {
+    width: 230px;
+    padding: 15px 0;
+  }
+  .sorteo .sorteocontainer h2 {
+    font-size: 1.8rem;
+  }
+  .sorteo .sorteocontainer ul li {
+    font-size: 1.3rem;
+    margin: 3px 0;
+  }
+  .sorteo .sorteo-container .botones input {
+    margin-top: 4px;
+  }
+}

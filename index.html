@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteo Digital | Agregar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400&family=Oswald:wght@300;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <section class="sorteo" id="container-sorteo">
+      <div class="sorteo-container">
+        <h2>Sorteo Digital</h2>
+        <ul id="lista-jugadores"></ul>
+        <div class="nombres">
+          <input id="sorteo" type="text" placeholder="Nombre Jugador" />
+        </div>
+        <div class="botones">
+          <input id="agregar-jugador" type="button" value="Agregar Jugador" />
+          <input id="ganador-btn-dos" type="button" value="Sortear Ganador" />
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
