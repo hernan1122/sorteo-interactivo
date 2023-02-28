@@ -14,12 +14,10 @@ export default function sorteoDos(input, agregar, ganador, jugadores) {
     $input.focus();
 
     if (inputValue === "" || inputValue.length === 0) {
-      /* alert("No has ingresado participantes"); */
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'No has ingresado participantes!',
-        /* footer: '<a href="">Why do I have this issue?</a>' */
       })
     } else {
       jugadoresArray.push(inputValue);
@@ -34,9 +32,10 @@ export default function sorteoDos(input, agregar, ganador, jugadores) {
     jugadoresArray = [];
     setTimeout(() => {
       $jugadores.innerHTML = "";
-    }, 2000);
-    /* alert(`El ganador es ${jugadorGanador}`); */
-    Swal.fire({
+    }, 4000);
+    
+    setTimeout(() => {
+      Swal.fire({
         title: `El ganador es ${jugadorGanador}`,
         showClass: {
           popup: "animate__animated animate__fadeInDown",
@@ -45,6 +44,24 @@ export default function sorteoDos(input, agregar, ganador, jugadores) {
           popup: "animate__animated animate__fadeOutUp",
         },
       });
+    }, 4000);
+    
+    //Contador
+    const contador = d.getElementById('contador')
+    const num = d.getElementById('numero');
+    let numero = 3;
+
+    const timer = setInterval(() => {
+      if (!!jugadorGanador && !!numero) {
+        contador.classList.remove('active');
+        console.log(numero);
+        num.innerHTML = `0${numero}`;
+        numero--;
+      } else if (!!jugadorGanador && numero == 0) {
+        contador.classList.add('active');
+        clearInterval(timer)
+      }
+    }, 1000);
   };
 
   $agregar.addEventListener("click", () => {
@@ -52,12 +69,10 @@ export default function sorteoDos(input, agregar, ganador, jugadores) {
   });
   $ganador.addEventListener("click", () => {
     if (jugadoresArray.length === 0) {
-      /* alert("No has ingresado participantes"); */
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'No has ingresado participantes!',
-        /* footer: '<a href="">Why do I have this issue?</a>' */
       })
     } else {
       ganadorSorteo();
