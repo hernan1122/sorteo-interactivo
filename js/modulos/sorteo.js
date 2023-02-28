@@ -32,7 +32,7 @@ export default function sorteoDos(input, agregar, ganador, jugadores) {
     jugadoresArray = [];
     setTimeout(() => {
       $jugadores.innerHTML = "";
-    }, 4000);
+    }, 6000);
     
     setTimeout(() => {
       Swal.fire({
@@ -44,12 +44,12 @@ export default function sorteoDos(input, agregar, ganador, jugadores) {
           popup: "animate__animated animate__fadeOutUp",
         },
       });
-    }, 4000);
+    }, 6000);
     
     //Contador
     const contador = d.getElementById('contador')
     const num = d.getElementById('numero');
-    let numero = 3;
+    let numero = 5;
 
     const timer = setInterval(() => {
       if (!!jugadorGanador && !!numero) {
